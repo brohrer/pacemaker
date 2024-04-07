@@ -48,26 +48,25 @@ If the pacemaker experiences a delay, it will allow faster iterations to try
 to catch up. Heads up: because of this, any individual iteration might end up being much
 shorter than suggested by the pacemaker's target rate.
 
-
-beat() returns the amount of time elapsed for that cycle that was
-in excess of the desired clock period.
+beat() returns the amount of time that it was off from the ideal pace, counting
+back from the first beat.
 ```python
-elapsed = pm.beat()
+off_by = pm.beat()
 ```
 A return value of 0 means it
 was exactly correct. If it's higher than that, it means that the
-cycle took a little longer to run than desired.
+cycle came in late.
 It will usually be off by a little. You can create a
 set of checks on the return value if it's important to keep the cycle
 time tightly controlled.
 ```python
-short_delay = .1  # seconds
-long_delay = .5  # seconds
-elapsed = pm.beat()
-if elapsed > long_delay:
-    raise RuntimeError(f"Loop duration exceeded by {elapsed} seconds.")
-if elapsed > short_delay:
-    print(f"Loop duration exceeded by {elapsed} seconds.")  # or log this
+a_little_late = .1  # seconds
+a_lot_late = .5  # seconds
+off_by = pm.beat()
+if off_by > a_lot_late:
+    raise RuntimeError(f"Last beat was running behind by {elapsed} seconds.")
+if off_by > a_little_late:
+    print(f"Last beat was running behind by {elapsed} seconds.")  # or log this
 ```
 
 For a deep dive on what the pacemaker does and why, check out
