@@ -1,6 +1,6 @@
 [project]
 name = "pacemaker-lite"
-version = "0.1"
+version = "0.1.1"
 authors = [
   { name="Brandon Rohrer", email="brohrer@gmail.com" },
 ]
