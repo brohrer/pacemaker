@@ -3,10 +3,12 @@ For controlling time per iteration loop in Python.
 
 A carefully regulated loop comes in handy for managing rate-limited APIs,
 frame refreshes in animations, and cycles in real-time simulations.
+This package provides an accurate metronome for your code to keep time with,
+good up to 1 MHz (one microsecond per iteration).
 
 The pacemaker package is intentionally minimalistic and has no external dependencies.
 It's a glorified snippet, shorter than this README.
-Works on Linux, Windows, and MacOS
+Works on Linux, Windows, and MacOS.
 
 ## Installation
 
