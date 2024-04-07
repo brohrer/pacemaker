@@ -1,0 +1,18 @@
+[project]
+name = "pacemaker"
+version = "0.1"
+authors = [
+  { name="Brandon Rohrer", email="brohrer@gmail.com" },
+]
+description = "For controlling the duration of iteration loops"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
