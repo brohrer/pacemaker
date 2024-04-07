@@ -69,4 +69,4 @@ if elapsed > short_delay:
 ```
 
 For a deep dive on what the pacemaker does and why, check out
-[Chapter 2 of How to Train Your Robot](https://brandonrohrer.com/httyr2).
+[Chapter 2 of How to Train Your Robot: Keeping Time with Python](https://brandonrohrer.com/httyr2pdf).
