@@ -7,13 +7,13 @@ This package provides an accurate metronome for your code to keep time with,
 good up to 1 MHz (one microsecond per iteration).
 
 The pacemaker package is intentionally minimalistic and has no external dependencies.
-It's a glorified snippet, shorter than this README.
+It's a glorified snippet. The whole package's code is shorter than this README.
 Works on Linux, Windows, and MacOS.
 
 ## Installation
 
 ```bash
-python3 -m pip install pacemaker-lite
+pip install pacemaker-lite
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ iterations_per_second = 2.5
 pm = Pacemaker(iterations_per_second)
 
 for i in range(100):
-    pm.beat()
+    _ = pm.beat()
     print(i)
 ```
 
